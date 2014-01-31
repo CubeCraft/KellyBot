@@ -14,15 +14,15 @@ public class FeedMessageContainer {
     private String author;
 
     public FeedMessageContainer(FeedMessage message) {
-        this.title = message.getTitle();
-        this.description = message.getDescription();
-        this.link = message.getLink();
-        this.author = message.getAuthor();
+        this.title = message.getTitle() != null ? message.getTitle() : "";
+        this.description = message.getDescription() != null ? message.getDescription() : "";
+        this.link = message.getLink() != null ? message.getLink() : "";
+        this.author = message.getAuthor() != null ? message.getAuthor() : "";
     }
 
     public FeedMessageContainer(Entry entry) {
-        this.title = entry.getTitle();
-        this.description = entry.getContent();
+        this.title = entry.getTitle() != null ? entry.getTitle() : "";
+        this.description = entry.getContent() != null ? entry.getContent() : "";
         try {
             this.link = entry.getBaseUri().toURL().toString();
         } catch (MalformedURLException exception) {
