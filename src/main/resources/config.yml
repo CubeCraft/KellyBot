@@ -1,20 +1,28 @@
 servers:
   irc.example.net:
     channels:
-      '#example':
+      '#channel1':
+        url: http://www.example.net/feed.rss
+        type: rss #RSS or ATOM feed supported.
+      '#channel2':
         url: http://www.example.net/feed.rss
         type: rss
+  irc.example2.net:
+    channels:
+      '#channel1':
+        url: http://www.example.net/feed.atom
+        type: atom
 name: KellyBot
 real-name: KellyBot
 login: KellyBot
-cap-enabled: true
-auto-nick-change: true
-auto-split-message: false
-max-line-length: null
-message-delay: null
-password: null
-startup-delay: 60
-check-rss-delay: 10
+cap-enabled: true # http://bit.ly/1hYZydc 
+auto-nick-change: true # Change nick automatically when default nick is already in use.
+auto-split-message: false # Will post as multiple messages if max-line-lenhgt is set and reached.
+max-line-length: null # Max number of characters to have on a single message. 
+message-delay: null # Delay between sending multiple messages, to avoid being kicked for spam.
+password: null # IRC NickServ password.
+startup-delay: 60 # Number of seconds to wait between startup and first message. (This includes connecting to the servers)
+check-rss-delay: 10 # Number of seconds betweeen checks for new feed items.
 # You can use the following in the message format:
 # %title : The title of the feed entry
 # %description : The description/content of the feed entry
