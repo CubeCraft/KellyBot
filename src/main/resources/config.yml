@@ -1,8 +1,8 @@
 servers:
-  irc.freenode.net:
+  irc.example.net:
     channels:
-      '#cubecraft':
-        url: https://www.cubecraftgames.net/forums/-/index.rss
+      '#example':
+        url: http://www.example.net/feed.rss
         type: rss
 name: KellyBot
 real-name: KellyBot
