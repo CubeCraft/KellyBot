@@ -17,7 +17,7 @@ real-name: KellyBot
 login: KellyBot
 cap-enabled: true # http://bit.ly/1hYZydc 
 auto-nick-change: true # Change nick automatically when default nick is already in use.
-auto-split-message: false # Will post as multiple messages if max-line-lenhgt is set and reached.
+auto-split-message: false # Will post as multiple messages if max-line-length is set and reached.
 max-line-length: null # Max number of characters to have on a single message. 
 message-delay: null # Delay between sending multiple messages, to avoid being kicked for spam.
 password: null # IRC NickServ password.
