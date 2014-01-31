@@ -24,7 +24,7 @@ public class FeedMessageContainer {
         this.title = entry.getTitle() != null ? entry.getTitle() : "";
         this.description = entry.getContent() != null ? entry.getContent() : "";
         try {
-            this.link = entry.getBaseUri().toURL().toString();
+            this.link = entry.getAlternateLinkResolvedHref().toURL().toString();
         } catch (MalformedURLException exception) {
             exception.printStackTrace();
         } catch (URISyntaxException exception) {
