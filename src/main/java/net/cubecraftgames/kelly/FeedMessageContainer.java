@@ -30,7 +30,7 @@ public class FeedMessageContainer {
         } catch (URISyntaxException exception) {
             exception.printStackTrace();
         }
-        this.author = entry.getAuthor() != null ? entry.getAuthor().getName() : null;
+        this.author = entry.getAuthor() != null ? entry.getAuthor().getName() : "";
     }
 
     public String getTitle() {
